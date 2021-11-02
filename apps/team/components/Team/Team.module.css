@@ -3,3 +3,19 @@
       40 40,
     pointer;
 }
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  height: 530px;
+}
+
+.motion {
+  position: absolute;
+  display: flex;
+}
