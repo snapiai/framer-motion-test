@@ -3,7 +3,7 @@ import { Image } from '../Image';
 import styles from './Team.module.css';
 import 'swiper/swiper.min.css';
 import { AnimatePresence, motion, PanInfo, Variants } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { wrap } from 'popmotion';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -54,12 +54,47 @@ const variants: Variants = {
   })
 }
 
+function getViewportWidth() {
+  return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+}
+
+function geSlideAmount(viewportWidth: number) {
+  if (viewportWidth < 640) {
+    return 1
+  }
+
+  if (viewportWidth < 1024) {
+    return 2
+  }
+
+  return 3
+}
+
 export const Team: PrismicSliceComponent<TeamSlice> = ({ slice }) => {
   const [[page, direction], setChange] = useState([0, 0])
+  const [viewportWidth, setViewportWidth] = useState(320)
 
-  const index = wrap(0, slice.items.length, page)
+  const slideAmount = geSlideAmount(viewportWidth);
+  console.log("🚀 ~ file: Team.tsx ~ line 78 ~ slideAmount", slideAmount)
+  const dataIndexes = Array(slideAmount).fill(1).map((_, index) => wrap(0, slice.items.length, page + index))
+  console.log("🚀 ~ file: Team.tsx ~ line 78 ~ dataIndexes", dataIndexes)
 
-  const { title, bio, description, avatar } = slice.items[index]
+  useEffect(
+    () => {
+      const handleResize = () => {
+        setViewportWidth(getViewportWidth())
+      }
+
+      setViewportWidth(getViewportWidth())
+      
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+    },
+    [],
+  )
   
   const handleDragEnd = (_, { offset, velocity }: PanInfo) => {
     const swipe = Math.abs(offset.x) * velocity.x
@@ -104,16 +139,22 @@ export const Team: PrismicSliceComponent<TeamSlice> = ({ slice }) => {
                 opacity: { duration: 0.2 },
               }}
             >
-              <div className="flex flex-col items-center space-y-6">
-                <div className="w-full max-w-[400px] self-center">
-                  <Image {...avatar} />
-                </div>
-                <div className="max-w-xs sm:px-6">
-                  <h4>{title}</h4>
-                  <p className="mt-1 text-gray">{bio}</p>
-                  <div className="mt-3">{description}</div>
-                </div>
-              </div>
+              {dataIndexes.map(index => {
+                const { title, bio, description, avatar } = slice.items[index]
+
+                return (
+                  <div key={title} className="flex flex-col items-center space-y-6">
+                    <div className="w-full max-w-[400px] self-center">
+                      <Image {...avatar} />
+                    </div>
+                    <div className="max-w-xs sm:px-6">
+                      <h4>{title}</h4>
+                      <p className="mt-1 text-gray">{bio}</p>
+                      <div className="mt-3">{description}</div>
+                    </div>
+                  </div>
+                )
+              })}
             </motion.div>
           </AnimatePresence>
           {/* <Swiper
