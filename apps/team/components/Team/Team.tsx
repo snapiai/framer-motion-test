@@ -39,7 +39,7 @@ export type TeamSlice = PrismicSlice<TeamPrimaryField, TeamItemFields>;
 
 const variants: Variants = {
   enter: (direction: number) => ({
-    x: direction > 0 ? 1000 : -1000,
+    x: direction > 0 ? 400 : -400,
     opacity: 0
   }),
   center: {
@@ -49,7 +49,7 @@ const variants: Variants = {
   },
   exit: (direction: number) => ({
     zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
+    x: direction < 0 ? 400 : -400,
     opacity: 0,
   })
 }
@@ -75,9 +75,7 @@ export const Team: PrismicSliceComponent<TeamSlice> = ({ slice }) => {
   const [viewportWidth, setViewportWidth] = useState(320)
 
   const slideAmount = geSlideAmount(viewportWidth);
-  console.log("🚀 ~ file: Team.tsx ~ line 78 ~ slideAmount", slideAmount)
   const dataIndexes = Array(slideAmount).fill(1).map((_, index) => wrap(0, slice.items.length, page + index))
-  console.log("🚀 ~ file: Team.tsx ~ line 78 ~ dataIndexes", dataIndexes)
 
   useEffect(
     () => {
