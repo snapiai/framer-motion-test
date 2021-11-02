@@ -1,0 +1,81 @@
+{
+  "slice_type": "team",
+  "slice_label": null,
+  "version": "sktwi1xtmkfgx8626",
+  "variation": "default-slice",
+  "primary": {
+    "title": "Team Spotlight",
+    "description": "Real registered dietitians. Real personalized recommendations.\nHave a question, need support, or want to celebrate a win?\nThey’re a text away!"
+  },
+  "items": [
+    {
+      "avatar": {
+        "dimensions": {
+          "width": 237,
+          "height": 289
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/snapihealth/281a6ead-382f-4878-b998-204bb700ac8b_Dana+1.png?auto=compress,format"
+      },
+      "avatarBackground": {
+        "dimensions": {
+          "width": 283,
+          "height": 270
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://snapihealth.cdn.prismic.io/snapihealth/3840de3a-bdb9-4d7d-b36d-a9b0cb716987_Vector.svg"
+      },
+      "title": "Dana Schechner",
+      "description": "Dana completed her dietetic internship with Hunter College and gained her experience working in pediatrics at the Montefiore Hospital Pediatric Program. ",
+      "bio": "Lead Registered Dietitianand\nand Certified Lactation Consultant"
+    },
+    {
+      "avatar": {
+        "dimensions": {
+          "width": 237,
+          "height": 289
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/snapihealth/99f0399d-41df-473a-982d-f55bf52ecca9_Dana+1.png?auto=compress,format"
+      },
+      "avatarBackground": {
+        "dimensions": {
+          "width": 283,
+          "height": 270
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://snapihealth.cdn.prismic.io/snapihealth/344038ad-94b9-4c96-b614-71e0f801230f_Vector.svg"
+      },
+      "title": "Allisyn Berg",
+      "description": "Allisyn completed her dietetic internship graduate program at Oregon Health & Science University, where in addition to clinical experience she contributed to several public health nutrition research projects.",
+      "bio": "Registered Dietitian Nutritionist (RDN) with a special interest in pediatrics and public health nutrition"
+    },
+    {
+      "avatar": {
+        "dimensions": {
+          "width": 237,
+          "height": 290
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/snapihealth/f42b6877-a7ae-48aa-8be0-8a1b3da22285_Dana+1.png?auto=compress,format"
+      },
+      "avatarBackground": {
+        "dimensions": {
+          "width": 283,
+          "height": 270
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://snapihealth.cdn.prismic.io/snapihealth/f3eadcce-7ba1-432b-91df-7699c644d56e_Vector.svg"
+      },
+      "title": "Sydnie Gil",
+      "description": "Sydnie also completed her Dietetic Internship and holds a Bachelors degree from Harvard College. She began her career in Dietetics in public health where she became passionate about pediatric nutrition and also has clinical experience. Sydnie has worked on multiple research projects in Nutrition science, Anthropology, and Human Evolutionary Biology over the past 10 years.",
+      "bio": "Registered Dietitian Nutritionist (RDN) with a Masters of Science in Nutrition Science from Marywood University"
+    }
+  ]
+}

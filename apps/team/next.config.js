@@ -10,6 +10,13 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    domains: [
+      'res.cloudinary.com',
+      'images.prismic.io',
+      'snapihealth.cdn.prismic.io',
+    ],
+  },
 };
 
 module.exports = withNx(nextConfig);

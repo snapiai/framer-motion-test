@@ -1,0 +1,54 @@
+{
+  "slice_type": "team",
+  "slice_label": null,
+  "version": "sktwi1xtmkfgx8626",
+  "variation": "default-slice",
+  "primary": {
+    "title": "Team Spotlight",
+    "description": "Real registered dietitians. Real personalized recommendations.\nHave a question, need support, or want to celebrate a win?\nThey’re a text away!"
+  },
+  "items": [
+    {
+      "avatar": {
+        "dimensions": {
+          "width": 574,
+          "height": 586
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/snapihealth/53fcc9d1-464c-4e28-985a-ed5dad1e4f5c_Dana.png?auto=compress,format"
+      },
+      "title": "Dana Schechner",
+      "bio": "Lead Registered Dietitianand\nand Certified Lactation Consultant",
+      "description": null
+    },
+    {
+      "avatar": {
+        "dimensions": {
+          "width": 574,
+          "height": 586
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/snapihealth/7a0c9bb6-4896-4404-838e-0313471e7f50_dietitian+photo.png?auto=compress,format"
+      },
+      "title": "Allisyn Berg",
+      "bio": "Registered Dietitian Nutritionist (RDN) with a special interest in pediatrics",
+      "description": null
+    },
+    {
+      "avatar": {
+        "dimensions": {
+          "width": 574,
+          "height": 586
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/snapihealth/dfca40dd-7422-4a3b-ad23-0b2d8766c413_dietitian+photo.png?auto=compress,format"
+      },
+      "title": "Sydnie Gil",
+      "bio": "Registered Dietitian Nutritionist (RDN) with a Masters of Science in Nutrition Science",
+      "description": null
+    }
+  ]
+}
