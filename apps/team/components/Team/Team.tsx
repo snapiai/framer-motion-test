@@ -155,27 +155,6 @@ export const Team: PrismicSliceComponent<TeamSlice> = ({ slice }) => {
               })}
             </motion.div>
           </AnimatePresence>
-          {/* <Swiper
-            slidesPerView={1}
-            spaceBetween={30}
-            loop={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
-            }}
-          >
-            
-              <SwiperSlide key={i}>
-                
-              </SwiperSlide>
-            
-          </Swiper> */}
         </div>
       </div>
     </section>
