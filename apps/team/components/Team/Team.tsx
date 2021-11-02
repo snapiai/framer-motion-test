@@ -23,7 +23,7 @@ export type PrismicSliceComponent<T> = React.FC<{ slice: T }>;
 
 export type TeamPrimaryField = {
   title: string;
-  description: string;
+  description?: string;
 };
 
 export type TeamItemFields = {
