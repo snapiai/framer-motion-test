@@ -31,7 +31,6 @@ export type TeamItemFields = {
   bio: string;
   description: string;
   avatar: ImageFieldImage;
-  avatarBackground: ImageFieldImage;
 };
 
 export type TeamSlice = PrismicSlice<TeamPrimaryField, TeamItemFields>;
