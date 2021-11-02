@@ -3,3 +3,16 @@
       40 40,
     pointer;
 }
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 530px;
+}
+
+.motion {
+  position: absolute;
+}
