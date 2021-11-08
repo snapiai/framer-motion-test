@@ -1,15 +1,13 @@
 import { ImageFieldImage } from '@prismicio/types';
-import { Image } from '../Image';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './Team.module.css';
 import 'swiper/swiper.min.css';
+import Slider from './SliderFramer/Slider';
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type EmptyItemFields = {};
-export interface PrismicSlice<
-  PrimaryFields = EmptyItemFields,
-  ItemsFields = EmptyItemFields
-> {
+
+export interface PrismicSlice<PrimaryFields = EmptyItemFields,
+  ItemsFields = EmptyItemFields> {
   variation?: string;
   name?: string;
   id?: string;
@@ -45,37 +43,7 @@ export const Team: PrismicSliceComponent<TeamSlice> = ({ slice }) => (
         <div className="pt-4">{slice.primary.description}</div>
       </div>
       <div className={`w-full ${styles.customCursor}`}>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          }}
-          className="mySwiper"
-        >
-          {slice.items.map(({ title, bio, description, avatar }, i) => (
-            <SwiperSlide key={i}>
-              <div className="flex flex-col items-center space-y-6">
-                <div className="w-full max-w-[400px] self-center">
-                  <Image {...avatar} />
-                </div>
-                <div className="max-w-xs sm:px-6">
-                  <h4>{title}</h4>
-                  <p className="mt-1 text-gray">{bio}</p>
-                  <div className="mt-3">{description}</div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <Slider images={slice.items}/>
       </div>
     </div>
   </section>
